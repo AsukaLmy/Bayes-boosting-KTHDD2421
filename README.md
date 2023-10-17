@@ -314,4 +314,9 @@ of course we can
 
 I think we can 
 
+---
+
+## criteria for picking a classier, naive Bayes or a decision tree or the boosted versions of these
+
+
 
