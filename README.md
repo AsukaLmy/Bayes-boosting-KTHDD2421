@@ -65,7 +65,7 @@ to improve the classification results for this scenario, there are some ways:
 
 ---
 
-1. the classification accuracy:
+### 1. the classification accuracy:
 
    basic classifier for data 'iris':
 > Trial: 0 Accuracy 84.4
@@ -164,4 +164,9 @@ to improve the classification results for this scenario, there are some ways:
 >Final mean classification accuracy  72 with standard deviation 3.82
 
 
+### 2. decision boundary
+
+   decision boundary for basic classification of 'iris':
+
+![GitHub 图标]()
 
