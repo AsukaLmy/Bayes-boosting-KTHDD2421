@@ -302,3 +302,16 @@ of course we can
 
    basic decision tree for 'iris':
 
+![iris_basic_dt](https://github.com/AsukaLmy/Bayes-boosting-KTHDD2421/blob/main/lab3py/iris_dt_basic.png)
+
+
+   boosted decision tree for 'iris':
+
+![iris_basic_dt](https://github.com/AsukaLmy/Bayes-boosting-KTHDD2421/blob/main/lab3py/iris_dt_boosted.png)
+
+
+### 3. Can ....?
+
+I think we can 
+
+
