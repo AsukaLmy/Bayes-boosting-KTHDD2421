@@ -140,7 +140,7 @@ to improve the classification results for this scenario, there are some ways:
 >Final mean classification accuracy  64.7 with standard deviation 4.03
 
 
-  boosted classifier for data 'vowel':
+  boosted classifier for data 'vowel' (I set T=3 instead of 10 to make it have outcome faster):
 >Trial: 0 Accuracy 65.6
 >
 >Trial: 10 Accuracy 77.3
@@ -168,5 +168,137 @@ to improve the classification results for this scenario, there are some ways:
 
    decision boundary for basic classification of 'iris':
 
-![GitHub 图标]()
+![iris_basic](https://github.com/AsukaLmy/Bayes-boosting-KTHDD2421/blob/main/lab3py/iris_basic_cf.png)
+
+
+
+   decision boundary for boosted classification of 'iris':
+
+![iris_boosted](https://github.com/AsukaLmy/Bayes-boosting-KTHDD2421/blob/main/lab3py/iris_boosted_cf.png)
+
+
+### 3. Can we......?
+
+of course we can 
+
+
+
+---
+   
+## implement decision tree classifier
+
+
+*(1) Is there any improvement in classification accuracy? Why/why not?*
+
+*(2) Plot the decision boundary of the boosted classfier on iris and compare it with that of the basic. What differences do you notice? Is the boundary of the boosted version more complex?*
+
+*(3) Can we make up for not using a more advanced model in the basic classifier (e.g. independent features) by using decision tree?*
+
+---
+
+### 1. accuracy
+
+   basic decision tree for 'iris'
+
+>Trial: 0 Accuracy 95.6
+>
+>Trial: 10 Accuracy 100
+>
+>Trial: 20 Accuracy 91.1
+>
+>Trial: 30 Accuracy 91.1
+>
+>Trial: 40 Accuracy 93.3
+>
+>Trial: 50 Accuracy 91.1
+>
+>Trial: 60 Accuracy 88.9
+>
+>Trial: 70 Accuracy 88.9
+>
+>Trial: 80 Accuracy 93.3
+>
+>Trial: 90 Accuracy 88.9
+>
+>Final mean classification accuracy  92.4 with standard deviation 3.71
+
+
+   boosted + decision tree for 'iris'
+
+>Trial: 0 Accuracy 95.6
+>
+>Trial: 10 Accuracy 100
+>
+>Trial: 20 Accuracy 95.6
+>
+>Trial: 30 Accuracy 93.3
+>
+>Trial: 40 Accuracy 93.3
+>
+>Trial: 50 Accuracy 95.6
+>
+>Trial: 60 Accuracy 88.9
+>
+>Trial: 70 Accuracy 93.3
+>
+>Trial: 80 Accuracy 93.3
+>
+>Trial: 90 Accuracy 93.3
+>
+>Final mean classification accuracy  94.6 with standard deviation 3.65
+
+
+   basic decision tree for 'vowel'
+
+>Trial: 0 Accuracy 63.6
+>
+>Trial: 10 Accuracy 68.8
+>
+>Trial: 20 Accuracy 63.6
+>
+>Trial: 30 Accuracy 66.9
+>
+>Trial: 40 Accuracy 59.7
+>
+>Trial: 50 Accuracy 63
+>
+>Trial: 60 Accuracy 59.7
+>
+>Trial: 70 Accuracy 68.8
+>
+>Trial: 80 Accuracy 59.7
+>
+>Trial: 90 Accuracy 68.2
+>
+>Final mean classification accuracy  64.1 with standard deviation 4
+
+
+   boosted + decision tree for 'vowel'
+
+>Trial: 0 Accuracy 85.1
+>
+>Trial: 10 Accuracy 89.6
+>
+>Trial: 20 Accuracy 87
+>
+>Trial: 30 Accuracy 92.2
+>
+>Trial: 40 Accuracy 84.4
+>
+>Trial: 50 Accuracy 80.5
+>
+>Trial: 60 Accuracy 86.4
+>
+>Trial: 70 Accuracy 85.7
+>
+>Trial: 80 Accuracy 89
+>
+>Trial: 90 Accuracy 83.1
+>
+>Final mean classification accuracy  86.6 with standard deviation 3.06
+
+
+### 2. boundary plot
+
+   basic decision tree for 'iris':
 
