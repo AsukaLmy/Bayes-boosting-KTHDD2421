@@ -51,6 +51,8 @@ to improve the classification results for this scenario, there are some ways:
 - understand your data, they are not dead stuff but living storytellor.
 
 
+---
+
 ## implement Boosting functions
 
 *Compute the classfication accuracy of the boosted classier on some data sets using testClassifier from labfuns.py and compare it with those of the basic classifier on the vowels and iris data sets (see Assignment 3):*
@@ -61,5 +63,103 @@ to improve the classification results for this scenario, there are some ways:
 
 *(3) Can we make up for not using a more advanced model in the basic classifier (e.g. independent features) by using boosting?*
 
+---
 
+1. the classification accuracy:
+
+   basic classifier for data 'iris':
+> Trial: 0 Accuracy 84.4
+> 
+> Trial: 10 Accuracy 95.6
+>
+> Trial: 20 Accuracy 93.3
+>
+> Trial: 30 Accuracy 86.7
+>
+> Trial: 40 Accuracy 88.9
+>
+> Trial: 50 Accuracy 91.1
+>
+> Trial: 60 Accuracy 86.7
+>
+> Trial: 70 Accuracy 91.1
+>
+> Trial: 80 Accuracy 86.7
+>
+> Trial: 90 Accuracy 91.1
+>
+> Final mean classification accuracy  89 with standard deviation 4.16
+
+
+  boosted classifier for data 'iris':
+>Trial: 0 Accuracy 95.6
+>
+>Trial: 10 Accuracy 100
+>
+>Trial: 20 Accuracy 93.3
+>
+>Trial: 30 Accuracy 91.1
+>
+>Trial: 40 Accuracy 97.8
+>
+>Trial: 50 Accuracy 93.3
+>
+>Trial: 60 Accuracy 93.3
+>
+>Trial: 70 Accuracy 97.8
+>
+>Trial: 80 Accuracy 95.6
+>
+>Trial: 90 Accuracy 93.3
+>
+>Final mean classification accuracy  94.7 with standard deviation 2.82
+
+
+
+  basic classifier for data 'vowel':
+>Trial: 0 Accuracy 61
+>
+>Trial: 10 Accuracy 66.2
+>
+>Trial: 20 Accuracy 74
+>
+>Trial: 30 Accuracy 66.9
+>
+>Trial: 40 Accuracy 59.7
+>
+>Trial: 50 Accuracy 64.3
+>
+>Trial: 60 Accuracy 66.9
+>
+>Trial: 70 Accuracy 63.6
+>
+>Trial: 80 Accuracy 62.3
+>
+>Trial: 90 Accuracy 70.8
+>
+>Final mean classification accuracy  64.7 with standard deviation 4.03
+
+
+  boosted classifier for data 'vowel':
+>Trial: 0 Accuracy 65.6
+>
+>Trial: 10 Accuracy 77.3
+>
+>Trial: 20 Accuracy 76
+>
+>Trial: 30 Accuracy 68.2
+>
+>Trial: 40 Accuracy 63.6
+>
+>Trial: 50 Accuracy 66.2
+>
+>Trial: 60 Accuracy 73.4
+>
+>Trial: 70 Accuracy 70.8
+>
+>Trial: 80 Accuracy 69.5
+>
+>Trial: 90 Accuracy 72.7
+>
+>Final mean classification accuracy  72 with standard deviation 3.82
 
