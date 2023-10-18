@@ -9,7 +9,9 @@ before you start, some modification should be made in labfun.py
 
 -109, 113, 118, 122-    np.int -> np.int64 (or int)
 
--287-    rtn.classifier = tree.DecisionTreeClassifier(max_depth=Xtr.shape[1]/2+1) -> rtn.classifier = tree.DecisionTreeClassifier(max_depth=int(Xtr.shape[1]/2+1))
+-287-    rtn.classifier = tree.DecisionTreeClassifier(max_depth=Xtr.shape[1]/2+1) -> 
+
+rtn.classifier = tree.DecisionTreeClassifier(max_depth=int(Xtr.shape[1]/2+1))
 
 ## testClassifier for vowels and iris datasets
 
