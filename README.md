@@ -48,7 +48,7 @@ When the features are strongly related, featuer independence assumption is not r
 - specific knowledge:  domain knowledge may suggest that features are not independent. For instance, in physics or engineering, physical laws may imply dependencies between variables
 
 
-(2). the boundary look as follow 
+(2). the boundary can be seen in next part
 
 to improve the classification results for this scenario, there are some ways:
 
@@ -202,7 +202,7 @@ of course we can
 
 *(2) Plot the decision boundary of the boosted classfier on iris and compare it with that of the basic. What differences do you notice? Is the boundary of the boosted version more complex?*
 
-*(3) Can we make up for not using a more advanced model in the basic classifier (e.g. independent features) by using decision tree?*
+*(3) Can we make up for not using a more advanced model in the basic classifier (e.g. independent features) by using boosting?*
 
 ---
 
