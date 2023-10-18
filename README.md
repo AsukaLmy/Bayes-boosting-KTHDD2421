@@ -1,6 +1,14 @@
 # Bayes-boosting-KTHDD2421
 lab3 Bayes+boosting
 
+*GUIDE*
+
+'lab3_assignment1-3.ipynb' is for assignment 1-3 (actually u can ignore and step for lab3_assignment4-9.ipynb directly)
+
+'lab3_assignment4-9.ipynb' is for assignment 4-8 (superise, no assignment9)
+
+'lab3_assignment4-9.ipynb 2.0' is the upgraded version of 'lab3_assignment4-9.ipynb'. I use the method mentioned in 'lab3.pdf' to replace the massive loop in function. (However, it doesn't be more efficient at all. Actually I think O(n) is same as before)
+
 *!ATTENTION!*
 
 before you start, some modification should be made in labfun.py
@@ -40,7 +48,7 @@ When the features are strongly related, featuer independence assumption is not r
 - specific knowledge:  domain knowledge may suggest that features are not independent. For instance, in physics or engineering, physical laws may imply dependencies between variables
 
 
-(2). the boundary look as follow (donnot forget to attach the image！！！！！！！！！！！！！！！！！)
+(2). the boundary look as follow 
 
 to improve the classification results for this scenario, there are some ways:
 
