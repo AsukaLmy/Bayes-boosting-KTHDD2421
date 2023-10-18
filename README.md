@@ -319,4 +319,40 @@ I think we can
 ## criteria for picking a classier, naive Bayes or a decision tree or the boosted versions of these
 
 
+Actually I am not very clear about this question. I would apply first and see if it perform better. But chatgpt have his answer:
 
+Your evaluation of Naive Bayes, Decision Trees, and their boosted versions based on the provided criteria is well-reasoned. Here's a summary of your analysis:
+
+1. **Outliers**:
+   - Naive Bayes is sensitive to outliers due to its probabilistic assumptions.
+   - Decision Trees are less sensitive to outliers and can adapt to them.
+   - Boosted Decision Trees may handle outliers better than Naive Bayes.
+
+2. **Irrelevant Inputs**:
+   - Naive Bayes may struggle with irrelevant inputs due to its feature independence assumption.
+   - Decision Trees can automatically learn feature relevance.
+   - Boosted Decision Trees can adapt to the relevance of features.
+
+3. **Predictive Power**:
+   - Naive Bayes is simple and may not capture complex relationships well.
+   - Decision Trees can model complex relationships but require proper tuning.
+   - Boosted Decision Trees generally have higher predictive power.
+
+4. **Mixed Types of Data**:
+   - Naive Bayes can handle mixed data types.
+   - Decision Trees can handle mixed types but may need special handling for categorical features.
+   - Boosted Decision Trees perform well with mixed data.
+
+5. **Scalability**:
+   - Naive Bayes is highly scalable.
+   - Decision Trees can be scalable with proper pruning but may overfit.
+   - Boosted Decision Trees can be computationally expensive, especially for large datasets.
+
+Based on these considerations, your recommendations are sound:
+
+- If scalability is a concern and you have a large dataset, Naive Bayes is a good choice.
+- For mixed data types, all options are viable, with boosted versions likely offering better predictive power.
+- When dealing with outliers and irrelevant inputs, Decision Trees or Boosted Decision Trees are more robust.
+- If predictive power is a top priority and computational resources are available, Boosted Decision Trees are a strong choice.
+
+Ultimately, the choice should align with your specific dataset, problem, and resource constraints. It's wise to experiment with multiple classifiers and perform thorough evaluations to determine the best-performing model for your task.
