@@ -21,7 +21,7 @@ before you start, some modification should be made in labfun.py
 
 rtn.classifier = tree.DecisionTreeClassifier(max_depth=int(Xtr.shape[1]/2+1))
 
-## testClassifier for vowels and iris datasets
+## Bayes for vowels and iris datasets
 
 *Answer the following questions:*
 
@@ -33,17 +33,17 @@ rtn.classifier = tree.DecisionTreeClassifier(max_depth=int(Xtr.shape[1]/2+1))
 
 (1). The reasonableness of this assumption depends on the specific problem and the nature of the features being considered:
 
-When the features of data are not related, or not that strongly related, featuer independence assumption is reasonable. For example:
+When the features of data are **not related**, or not that strongly related, featuer independence assumption is reasonable. For example:
 
 - text classification(like spam detection in email): though words in a document are often correlated, it can work surprisingly well in practice and simplifies the modeling process.
 - Sparse Data:  In situations where you have limited data and many features, assuming feature independence can help to mitigate the curse of dimensionality. It simplifies the estimation of probabilities because you don't need to estimate high-dimensional joint probability distributions.
 
 
-When the features are strongly related, featuer independence assumption is not reasonable anymore. 
+When the features are **strongly related**, featuer independence assumption is not reasonable anymore. 
 
 - structured data: when data has clear dependencies or structures among features, the feature independence assumption is often violated. For example, in computer vision, adjacent pixels in an image are highly correlated, so assuming independence between them is not reasonable.
 
-- time series data: time series data, where observations are taken at consecutive time points, typically exhibits temporal dependencies. Assuming independence between time steps would ignore crucial information
+- time series data: time series data typically exhibits temporal dependencies. Assuming independence between time steps would ignore crucial information
 
 - specific knowledge:  domain knowledge may suggest that features are not independent. For instance, in physics or engineering, physical laws may imply dependencies between variables
 
@@ -52,11 +52,11 @@ When the features are strongly related, featuer independence assumption is not r
 
 to improve the classification results for this scenario, there are some ways:
 
-- choose different classifier or try ensemble methods like Random Forest, Gradient Boosting, or AdaBoost, which can often improve classification accuracy by combining multiple weak learners
+- choose different classifier or try ensemble methods like Random Forest, Gradient Boosting, or AdaBoost.
 
 - data preprocess like normalization or handle missing data using imputation techniques or removing instances with missing values.
 
-- apply regularization techniques to prevent overfitting. Techniques like L1 or L2 regularization can help improve the classifier's generalization.
+- apply regularization techniques to prevent overfitting. (L1 or L2 regularization)
 
 - understand your data, they are not dead stuff but living storytellor.
 
@@ -75,7 +75,15 @@ to improve the classification results for this scenario, there are some ways:
 
 ---
 
-### 1. the classification accuracy:
+### 1. the classification accuracy: 
+
+'iris': 89 -> 94.7
+
+'vowel': 64.7 -> 72
+
+improved.  
+
+Boosting creates a strong classifier by combining multiple weak classifiers, reducing the model's bias, and enhancing its generalization ability. 
 
    basic classifier for data 'iris':
 > Trial: 0 Accuracy 84.4
@@ -176,6 +184,8 @@ to improve the classification results for this scenario, there are some ways:
 
 ### 2. decision boundary
 
+After boosting, the boundary become more complex fittable.
+
    decision boundary for basic classification of 'iris':
 
 ![iris_basic](https://github.com/AsukaLmy/Bayes-boosting-KTHDD2421/blob/main/lab3py/iris_basic_cf.png)
@@ -191,7 +201,7 @@ to improve the classification results for this scenario, there are some ways:
 
 of course we can 
 
-
+Sometimes, a more advanced model may be better. For example, by using decision tree the accuarcy reach 92.4 easily while it reach 94.7 by using boosted bayes.
 
 ---
    
@@ -207,6 +217,14 @@ of course we can
 ---
 
 ### 1. accuracy
+
+'iris': 92.4 -> 94.6
+
+'vowel': 64.1 -> 84.6
+
+improved. 
+
+bigger increase in 'vowel' 
 
    basic decision tree for 'iris'
 
@@ -336,27 +354,28 @@ Your evaluation of Naive Bayes, Decision Trees, and their boosted versions based
 1. **Outliers**:
    - Naive Bayes is sensitive to outliers due to its probabilistic assumptions.
    - Decision Trees are less sensitive to outliers and can adapt to them.
-   - Boosted Decision Trees may handle outliers better than Naive Bayes.
+   - Boosted version may handle outliers better than Naive Bayes.
 
 2. **Irrelevant Inputs**:
    - Naive Bayes may struggle with irrelevant inputs due to its feature independence assumption.
    - Decision Trees can automatically learn feature relevance.
-   - Boosted Decision Trees can adapt to the relevance of features.
+   - Boosted version can adapt to the relevance of features.
 
 3. **Predictive Power**:
    - Naive Bayes is simple and may not capture complex relationships well.
    - Decision Trees can model complex relationships but require proper tuning.
-   - Boosted Decision Trees generally have higher predictive power.
+   - Boosted version generally have higher predictive power.
 
 4. **Mixed Types of Data**:
    - Naive Bayes can handle mixed data types.
    - Decision Trees can handle mixed types but may need special handling for categorical features.
-   - Boosted Decision Trees perform well with mixed data.
+   - Boosted version perform well with mixed data.
 
 5. **Scalability**:
    - Naive Bayes is highly scalable.
    - Decision Trees can be scalable with proper pruning but may overfit.
-   - Boosted Decision Trees can be computationally expensive, especially for large datasets.
+   - Boosted decision tree can be computationally expensive, especially for large datasets.
+   - boosted bayes depends on the basic bayes classifier it used and the scale of data
 
 Based on these considerations, your recommendations are sound:
 
