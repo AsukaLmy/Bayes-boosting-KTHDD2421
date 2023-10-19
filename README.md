@@ -375,7 +375,7 @@ Your evaluation of Naive Bayes, Decision Trees, and their boosted versions based
    - Naive Bayes is highly scalable.
    - Decision Trees can be scalable with proper pruning but may overfit.
    - Boosted decision tree can be computationally expensive, especially for large datasets.
-   - boosted bayes depends on the basic bayes classifier it used and the scale of data
+   - Boosted bayes depends on the basic bayes classifier it used and the scale of data
 
 Based on these considerations, your recommendations are sound:
 
