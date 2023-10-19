@@ -355,27 +355,42 @@ Your evaluation of Naive Bayes, Decision Trees, and their boosted versions based
    - Naive Bayes is sensitive to outliers due to its probabilistic assumptions.
    - Decision Trees are less sensitive to outliers and can adapt to them.
    - Boosted version may handle outliers better than Naive Bayes.
+   v2:
+   - Decision trees and their boosted versions (like Random Forests or Gradient Boosted Trees) are generally more robust to outliers, as they partition the feature space into regions and don't rely on assumptions of a particular distribution for the data.
+   - Naive Bayes classifiers might be more sensitive to outliers due to their assumptions (independence among features and certain probability distributions).
 
 2. **Irrelevant Inputs**:
    - Naive Bayes may struggle with irrelevant inputs due to its feature independence assumption.
    - Decision Trees can automatically learn feature relevance.
    - Boosted version can adapt to the relevance of features.
+   v2:
+   - - Decision trees naturally ignore irrelevant features as they build upon greedy algorithms based on information gain or Gini impurity, thus they typically perform better with irrelevant inputs.
+   - Naive Bayes might suffer from irrelevant inputs as it tends to consider all features equally important, due to its assumption of independence between features.
 
 3. **Predictive Power**:
    - Naive Bayes is simple and may not capture complex relationships well.
    - Decision Trees can model complex relationships but require proper tuning.
    - Boosted version generally have higher predictive power.
+   v2:
+   - Boosted versions of decision trees, like Random Forests or Gradient Boosting Machines (GBMs), typically have higher predictive power as they combine the strengths of multiple learners to reduce overfitting and variance.
+   - Naive Bayes, while effective in certain scenarios, might have limited predictive power due to its strong assumptions.
 
 4. **Mixed Types of Data**:
    - Naive Bayes can handle mixed data types.
    - Decision Trees can handle mixed types but may need special handling for categorical features.
    - Boosted version perform well with mixed data.
+   v2:
+   - Decision trees can naturally handle different types of data.
+   - Naive Bayes requires different models for different data types (e.g., Gaussian Naive Bayes for continuous data, Multinomial Naive Bayes for categorical data), which increases implementation complexity.
 
 5. **Scalability**:
    - Naive Bayes is highly scalable.
    - Decision Trees can be scalable with proper pruning but may overfit.
    - Boosted decision tree can be computationally expensive, especially for large datasets.
    - Boosted bayes depends on the basic bayes classifier it used and the scale of data
+   v2:
+   - Naive Bayes classifiers, due to their simplicity, generally have higher scalability when dealing with large datasets.
+   - Decision trees and, in particular, their boosted versions might require more computational resources and time on large datasets.
 
 Based on these considerations, your recommendations are sound:
 
